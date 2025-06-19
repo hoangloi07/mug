@@ -1,0 +1,9 @@
+[package]
+name = "mug"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+console = "0.15.11"
+lofty = "0.22.4"
+rodio = "0.20.1"
