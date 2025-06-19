@@ -6,6 +6,8 @@ pub mod msink;
 
 
 
-pub fn main() -> std::io::Result<()> {
+pub
+fn main() -> std::io::Result<()> {
+    
     Ok(())
 }

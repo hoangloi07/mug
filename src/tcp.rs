@@ -4,7 +4,6 @@ use std::io::{Read, Write};
 use std::net::{TcpListener, TcpStream};
 use std::thread;
 
-
 // fn handle_signal (sig: mug::Signal) {
 //     match sig {
 //         PLAY
@@ -21,7 +20,6 @@ fn handle_client(mut stream: TcpStream) {
         }
 
         let message = String::from_utf8_lossy(&buffer[..bytes_read]);
-        
 
         // Echo back
         stream.write(&buffer[..bytes_read]).unwrap();

@@ -8,8 +8,7 @@ pub struct Playlist {
     pub current: Option<usize>,
 }
 impl Playlist {
-    pub
-    fn new() -> Self {
+    pub fn new() -> Self {
         Playlist {
             list: None,
             next: None,
@@ -38,20 +37,18 @@ impl Playlist {
                 };
 
                 Ok(())
-            },
+            }
             Some(_) => Err("Playlist is empty".into()),
             None => Err("No playlist loaded".into()),
         }
     }
-    pub
-    fn add_to_list(&mut self, track: Track) {
+    pub fn add_to_list(&mut self, track: Track) {
         match &mut self.list {
             Some(vec) => vec.push(track),
             None => self.list = Some(vec![track]),
         }
     }
-    pub
-    fn remove_from_list(&mut self, index: usize) -> Option<Track> {
+    pub fn remove_from_list(&mut self, index: usize) -> Option<Track> {
         match &mut self.list {
             Some(vec) => {
                 // Check if index is out of bounds

@@ -8,7 +8,7 @@ pub enum PROP {
     YEAR,
     ALBUM,
     GENRE,
-    TRACK
+    TRACK,
 }
 
 pub enum Signal {
@@ -16,5 +16,5 @@ pub enum Signal {
     PAUSE,
     STOP,
     NEXT,
-    PREVIOUS
+    PREVIOUS,
 }

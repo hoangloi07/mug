@@ -1,7 +1,7 @@
 pub mod playlist;
+pub mod sock;
 pub mod tags;
 pub mod track;
-pub mod sock;
 
 use ::rodio::{Decoder, OutputStream, Sink};
 use ::std::fs::File;
@@ -84,12 +84,13 @@ pub fn main() {
                                     break;
                                 }
                                 'l' => {
-                                    match sink.try_seek(Duration::from_secs(5)) {
-                                        Ok(_) => {},
+                                    match sink.try_seek(Duration::from_secs(5))
+                                    {
+                                        Ok(_) => {}
                                         Err(_) => match k.next_track() {
                                             Ok(_) => {}
                                             Err(_) => {}
-                                        }
+                                        },
                                     }
                                 }
                                 // 'b' =>
